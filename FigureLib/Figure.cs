@@ -8,7 +8,8 @@ namespace FigureLib
     public abstract class Figure
     {
         string name;
-        Top a, b, c, d;
+        Top a = new Top();
+             b, c, d;
         
 
         public Figure(Top a, Top b, Top c)
