@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace FigureLib
 {
     public class Triangle : Figure
     {
-        
-        public Triangle(Top a, Top b, Top c) : base(a, b, c)
+        public Triangle(Top a, Top b, Top c, Color colorFigure) : base(a, b, c, colorFigure)
         {
             Name = "Triangle";
         }

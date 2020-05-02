@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace FigureLib
 {
@@ -7,23 +8,27 @@ namespace FigureLib
     /// </summary>
     public abstract class Figure
     {
-        string name;
-        Top a = new Top();
-             b, c, d;
-        
+        string name, colour;
+        Top a, b, c, d;
 
-        public Figure(Top a, Top b, Top c)
+        Color colorFigure;
+        
+       
+
+        public Figure(Top a, Top b, Top c, Color colorFigure)
         {
             A = a;
             B = b;
             C = c;
+            ColorFigure = colorFigure;
         }
-        public Figure(Top a, Top b, Top c, Top d)
+        public Figure(Top a, Top b, Top c, Top d, Color colorFigure)
         {
             A = a;
             B = b;
             C = c;
             D = d;
+            ColorFigure = colorFigure;
         }
 
 
@@ -32,6 +37,9 @@ namespace FigureLib
         public Top B { get => b; set => b = value; }
         public Top C { get => c; set => c = value; }
         public Top D { get => d; set => d = value; }
+        public string Colour { get => colour; set => colour = value; }
+        public Color ColorFigure { get => colorFigure; set => colorFigure = value; }
+
 
 
 
