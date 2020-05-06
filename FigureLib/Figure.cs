@@ -10,6 +10,8 @@ namespace FigureLib
     {
         string name, colour;
         Top a, b, c, d;
+        Top[] Tops;
+        
 
         Color colorFigure;
         
@@ -21,6 +23,7 @@ namespace FigureLib
             B = b;
             C = c;
             ColorFigure = colorFigure;
+            Tops = new Top[3] { A, B, C };
         }
         public Figure(Top a, Top b, Top c, Top d, Color colorFigure)
         {
@@ -29,6 +32,7 @@ namespace FigureLib
             C = c;
             D = d;
             ColorFigure = colorFigure;
+            Tops = new Top[4] { A, B, C, D };
         }
 
 
@@ -49,6 +53,17 @@ namespace FigureLib
         /// </summary>
         /// <returns>square</returns>
         public abstract double Square();
+        public abstract double Perimeter();
+        public void ShowInfo()
+        {
+            Console.WriteLine(this.Name);
+            Console.WriteLine($"Color {Colour}");
+            Console.WriteLine("Coordinates");
+            foreach(Top top in Tops)
+            {
+                Console.WriteLine(top);
+            }
+        }
     }
     public struct Top
     {

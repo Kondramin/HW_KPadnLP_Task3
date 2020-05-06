@@ -12,6 +12,11 @@ namespace FigureLib
             Name = "Triangle";
         }
 
+        public override double Perimeter()
+        {
+            throw new NotImplementedException();
+        }
+
         public override double Square()
         {
             throw new NotImplementedException();
