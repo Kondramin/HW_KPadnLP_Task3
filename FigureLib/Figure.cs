@@ -11,8 +11,6 @@ namespace FigureLib
         string name, colour;
         Top a, b, c, d;
         Top[] Tops;
-        
-
         Color colorFigure;
         
        
@@ -41,7 +39,6 @@ namespace FigureLib
         public Top B { get => b; set => b = value; }
         public Top C { get => c; set => c = value; }
         public Top D { get => d; set => d = value; }
-        public string Colour { get => colour; set => colour = value; }
         public Color ColorFigure { get => colorFigure; set => colorFigure = value; }
 
 
@@ -52,17 +49,21 @@ namespace FigureLib
         /// Calculate square of figure.
         /// </summary>
         /// <returns>square</returns>
-        public abstract double Square();
+        public abstract double Area();
         public abstract double Perimeter();
         public void ShowInfo()
         {
             Console.WriteLine(this.Name);
-            Console.WriteLine($"Color {Colour}");
+            Console.WriteLine($"Color {ColorFigure}");
             Console.WriteLine("Coordinates");
             foreach(Top top in Tops)
             {
                 Console.WriteLine(top);
             }
+        }
+        public double SideLength(Top a, Top b)
+        {
+            return Math.Sqrt((Math.Pow((a.X - b.X), 2)) + (Math.Pow((a.Y - b.Y), 2)));
         }
     }
     public struct Top
@@ -77,8 +78,8 @@ namespace FigureLib
 
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
-
-
+        
     }
+    
 
 }

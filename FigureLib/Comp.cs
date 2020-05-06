@@ -9,7 +9,7 @@ namespace FigureLib
     {
         public int Compare(object x, object y)
         {
-            throw new NotImplementedException();
+            return (new CaseInsensitiveComparer().Compare(x, y));
         }
     }
 }

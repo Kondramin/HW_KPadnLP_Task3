@@ -14,12 +14,14 @@ namespace FigureLib
 
         public override double Perimeter()
         {
-            throw new NotImplementedException();
+            return (SideLength(A, B) + SideLength(B, C) + SideLength(A, C));
         }
 
-        public override double Square()
+        public override double Area()
         {
-            throw new NotImplementedException();
+            double hafPer = Perimeter()/2;
+            //S=√p(p−a)(p−b)(p−c)
+            return (Math.Sqrt(hafPer * (hafPer - SideLength(A, B)) * (hafPer - SideLength(A, C)) * (hafPer * SideLength(B, C))));
         }
     }
 }
