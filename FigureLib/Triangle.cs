@@ -7,6 +7,7 @@ namespace FigureLib
 {
     public class Triangle : Figure
     {
+        //taes
         public Triangle(Top a, Top b, Top c, Color colorFigure) : base(a, b, c, colorFigure)
         {
             Name = "Triangle";
