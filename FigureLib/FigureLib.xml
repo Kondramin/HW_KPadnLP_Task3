@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FigureLib</name>
+    </assembly>
+    <members>
+        <member name="T:FigureLib.Figure">
+            <summary>
+            abstract base class figure
+            </summary>
+        </member>
+        <member name="M:FigureLib.Figure.#ctor(FigureLib.Top,FigureLib.Top,FigureLib.Top,System.Drawing.Color)">
+            <summary>
+            Simple constructor to triangle
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="colorFigure"></param>
+        </member>
+        <member name="M:FigureLib.Figure.#ctor(FigureLib.Top,FigureLib.Top,FigureLib.Top,FigureLib.Top,System.Drawing.Color)">
+            <summary>
+            Simple constructor to quadrangle
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="d"></param>
+            <param name="colorFigure"></param>
+        </member>
+        <member name="P:FigureLib.Figure.Name">
+            <summary>
+            Name prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Figure.A">
+            <summary>
+            Top prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Figure.B">
+            <summary>
+            Top prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Figure.C">
+            <summary>
+            Top prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Figure.D">
+            <summary>
+            Top prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Figure.ColorFigure">
+            <summary>
+            Color of figure prop
+            </summary>
+        </member>
+        <member name="M:FigureLib.Figure.Area">
+            <summary>
+            Calculate square of figure.
+            </summary>
+            <returns>square</returns>
+        </member>
+        <member name="M:FigureLib.Figure.Perimeter">
+            <summary>
+            Calculate perimeter of figure
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FigureLib.Figure.ShowInfo">
+            <summary>
+            Show info of class figure
+            </summary>
+        </member>
+        <member name="M:FigureLib.Figure.ClosestConsoleColor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Selects the applied color
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FigureLib.Figure.SideLength(FigureLib.Top,FigureLib.Top)">
+            <summary>
+            Calculate Side length of figure
+            /// </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FigureLib.Figure.ReadAndDeserialize">
+            <summary>
+            Read info of objects class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FigureLib.Figure.SerializeAndSave(System.Collections.Generic.List{FigureLib.Figure})">
+            <summary>
+            Safe info if objects class
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:FigureLib.Figure.SerializeAndRewritingSave(System.Collections.Generic.List{FigureLib.Figure})">
+            <summary>
+            Rewriting safe info if objects class
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:FigureLib.Top">
+            <summary>
+            Simple structure top of figure
+            </summary>
+        </member>
+        <member name="M:FigureLib.Top.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Simple constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="P:FigureLib.Top.X">
+            <summary>
+            X prop
+            </summary>
+        </member>
+        <member name="P:FigureLib.Top.Y">
+            <summary>
+            Y prop
+            </summary>
+        </member>
+        <member name="T:FigureLib.Triangle">
+            <summary>
+            Class of triangle
+            </summary>
+        </member>
+        <member name="M:FigureLib.Triangle.#ctor(FigureLib.Top,FigureLib.Top,FigureLib.Top,System.Drawing.Color)">
+            <summary>
+            Simple constructor
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="colorFigure"></param>
+        </member>
+        <member name="M:FigureLib.Triangle.Perimeter">
+            <summary>
+            Override method of perimeter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FigureLib.Triangle.Area">
+            <summary>
+            Override method of area
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

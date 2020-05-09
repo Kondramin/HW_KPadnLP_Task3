@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Text;
 
 namespace FigureLib
@@ -27,7 +28,7 @@ namespace FigureLib
         /// <returns></returns>
         public override double Perimeter()
         {
-            return (SideLength(A, B) + SideLength(B, C) + SideLength(A, C));
+            return Math.Round(SideLength(A, B) + SideLength(B, C) + SideLength(A, C),2);
         }
         /// <summary>
         /// Override method of area
@@ -36,7 +37,7 @@ namespace FigureLib
         public override double Area()
         {
             double hafPer = Perimeter()/2;
-            return (Math.Sqrt(hafPer * (hafPer - SideLength(A, B)) * (hafPer - SideLength(A, C)) * (hafPer * SideLength(B, C))));
+            return Math.Round(Math.Sqrt(hafPer * (hafPer - SideLength(A, B)) * (hafPer - SideLength(A, C)) * (hafPer * SideLength(B, C))),2);
         }
     }
 }

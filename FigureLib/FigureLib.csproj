@@ -8,4 +8,8 @@
     <DocumentationFile>D:\Учёба\2-й курс\Вторая читка\КПиЯП\ДКР\HWTask2\HW_KPandLP_Task3\HW_KPadnLP_Task3\FigureLib\FigureLib.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+  </ItemGroup>
+
 </Project>
