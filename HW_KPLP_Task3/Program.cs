@@ -46,6 +46,7 @@ namespace HW_KPLP_Task3
     {
         static void Main(string[] args)
         {
+            List<Figure> FigureList = new List<Figure>();
             int x = 5;
             int y = 5;
             Top a = new Top(x, y);
@@ -59,7 +60,10 @@ namespace HW_KPLP_Task3
             var tt = new Triangle( new Top(2, 5), new Top(12, 3), new Top(4, 5), Color.FromName("Red"));
             triangle.ShowInfo();
             tt.ShowInfo();
-            
+
+            FigureList.Add(triangle);
+            FigureList.Add(tt);
+
         }
     }
 }

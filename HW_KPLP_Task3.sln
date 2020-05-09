@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_KPLP_Task3", "HW_KPLP_Task3\HW_KPLP_Task3.csproj", "{79ACB910-73AC-41B6-8DB4-D63469F0F1C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureLib", "FigureLib\FigureLib.csproj", "{45498084-6EA0-4C63-A6F8-5299F2E4B66C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FigureLib", "FigureLib\FigureLib.csproj", "{45498084-6EA0-4C63-A6F8-5299F2E4B66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInterface", "ConsoleInterface\ConsoleInterface.csproj", "{442B587D-908D-42E1-95BC-6DA1C980E611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{45498084-6EA0-4C63-A6F8-5299F2E4B66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45498084-6EA0-4C63-A6F8-5299F2E4B66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45498084-6EA0-4C63-A6F8-5299F2E4B66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442B587D-908D-42E1-95BC-6DA1C980E611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442B587D-908D-42E1-95BC-6DA1C980E611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442B587D-908D-42E1-95BC-6DA1C980E611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442B587D-908D-42E1-95BC-6DA1C980E611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

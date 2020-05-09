@@ -16,7 +16,7 @@ namespace FigureLib
         Top a, b, c, d;
         Top[] Tops;
         Color colorFigure;
-        List<Figure> FigureList = new List<Figure>();
+        
                
         /// <summary>
         /// Simple constructor to triangle
@@ -33,6 +33,8 @@ namespace FigureLib
             ColorFigure = colorFigure;
             Tops = new Top[3] { A, B, C };
         }
+
+
         /// <summary>
         /// Simple constructor to quadrangle
         /// </summary>
@@ -50,6 +52,7 @@ namespace FigureLib
             ColorFigure = colorFigure;
             Tops = new Top[4] { A, B, C, D };
         }
+
 
         /// <summary>
         /// Name prop
@@ -76,16 +79,21 @@ namespace FigureLib
         /// </summary>
         public Color ColorFigure { get => colorFigure; set => colorFigure = value; }
 
+
         /// <summary>
         /// Calculate square of figure.
         /// </summary>
         /// <returns>square</returns>
         public abstract double Area();
+
+
         /// <summary>
         /// Calculate perimeter of figure
         /// </summary>
         /// <returns></returns>
         public abstract double Perimeter();
+
+
         /// <summary>
         /// Show info of class figure
         /// </summary>
@@ -102,12 +110,14 @@ namespace FigureLib
             Console.WriteLine("Coordinates");
             foreach(Top top in Tops)
             {
-                Console.WriteLine($"{top.X} ,  {top.Y}");
+                Console.WriteLine($"{top.X}, {top.Y}");
             }
             Console.WriteLine($"Perimeter = {Perimeter()}");
             Console.WriteLine($"Area = {Area()}");
             Console.ResetColor();
         }
+
+
         /// <summary>
         /// Selects the applied color
         /// </summary>
@@ -136,6 +146,7 @@ namespace FigureLib
             return ret;
         }
 
+
         /// <summary>
         /// Calculate Side length of figure
         /// /// </summary>
@@ -146,6 +157,11 @@ namespace FigureLib
         {
             return Math.Sqrt((Math.Pow((a.X - b.X), 2)) + (Math.Pow((a.Y - b.Y), 2)));
         }
+
+
+
+
+
         /// <summary>
         /// Read info of objects class
         /// </summary>
@@ -158,6 +174,8 @@ namespace FigureLib
                 return (List<Figure>)serializer.Deserialize(sr);
             }
         }
+
+
         /// <summary>
         /// Safe info if objects class
         /// </summary>
@@ -170,6 +188,8 @@ namespace FigureLib
                 serializer.Serialize(sw, data);
             }
         }
+
+
         /// <summary>
         /// Rewriting safe info if objects class
         /// </summary>
@@ -183,6 +203,8 @@ namespace FigureLib
             }
         }
     }
+
+
     /// <summary>
     /// Simple structure top of figure
     /// </summary>
