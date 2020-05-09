@@ -15,7 +15,6 @@ namespace FigureLib
         public override double Area()
         {
             double hafPer = Perimeter() / 2;
-            //S=sqrt{(p-a)(p-b)(p-c)(p-d)}
             return (Math.Sqrt((hafPer - SideLength(A, B)) * (hafPer - SideLength(B, C)) * (hafPer - SideLength(C, D)) * (hafPer - SideLength(A, D))));
         }
 
