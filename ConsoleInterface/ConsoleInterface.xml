@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleInterface</name>
+    </assembly>
+    <members>
+        <member name="M:ConsoleInterface.ConsoleInterface.#ctor">
+            <summary>
+            Simple initialization.
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface.StartInterface">
+            <summary>
+            Method start UI.
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface.CreateTriangle">
+            <summary>
+            Create triangle
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface.CreateQuadrangle">
+            <summary>
+            Create quadrangle
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface.ShowFigureList">
+            <summary>
+            Show all figures in list.
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface.CheckNumber">
+            <summary>
+            Check correct input.
+            </summary>
+            <returns>number</returns>
+        </member>
+    </members>
+</doc>

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections;
 
 namespace FigureLib
 {
-    class Comp : IComparer
+    public class Comp : IComparer
     {
-        public int Compare(object x, object y)
+        public int Compare(Figure x, Figure y)
         {
-            return (new CaseInsensitiveComparer().Compare(x, y));
+            return (new CaseInsensitiveComparer().Compare(x.Area(), y.Area()));
         }
     }
 }

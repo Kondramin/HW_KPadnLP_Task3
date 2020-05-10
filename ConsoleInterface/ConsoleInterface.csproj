@@ -4,4 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Учёба\2-й курс\Вторая читка\КПиЯП\ДКР\HW_KPadnLP_Task3\ConsoleInterface\ConsoleInterface.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FigureLib\FigureLib.csproj" />
+  </ItemGroup>
+
 </Project>

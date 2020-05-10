@@ -10,14 +10,14 @@ namespace FigureLib
     /// <summary>
     /// abstract base class figure
     /// </summary>
-    public abstract class Figure
+    public abstract class Figure : Comp
     {
         string name;
         Top a, b, c, d;
         Top[] Tops;
         Color colorFigure;
+
         
-               
         /// <summary>
         /// Simple constructor to triangle
         /// </summary>
@@ -99,7 +99,7 @@ namespace FigureLib
         /// </summary>
         public void ShowInfo()
         {
-           
+
             var cc = ClosestConsoleColor(ColorFigure.R, ColorFigure.G, ColorFigure.B);
 
             Console.ForegroundColor = cc;
@@ -108,7 +108,7 @@ namespace FigureLib
             Console.WriteLine(this.Name);
             Console.WriteLine($"Color {ColorFigure}");
             Console.WriteLine("Coordinates");
-            foreach(Top top in Tops)
+            foreach (Top top in Tops)
             {
                 Console.WriteLine($"{top.X}, {top.Y}");
             }
@@ -132,7 +132,7 @@ namespace FigureLib
 
             foreach (ConsoleColor cc in Enum.GetValues(typeof(ConsoleColor)))
             {
-                var n = Enum.GetName(typeof(ConsoleColor), cc);
+                var n = cc.ToString();//Enum.GetName(typeof(ConsoleColor), cc);
                 var c = System.Drawing.Color.FromName(n == "DarkYellow" ? "Orange" : n); // bug fix
                 var t = Math.Pow(c.R - rr, 2.0) + Math.Pow(c.G - gg, 2.0) + Math.Pow(c.B - bb, 2.0);
                 if (t == 0.0)
@@ -156,52 +156,7 @@ namespace FigureLib
         public double SideLength(Top a, Top b)
         {
             return Math.Sqrt((Math.Pow((a.X - b.X), 2)) + (Math.Pow((a.Y - b.Y), 2)));
-        }
-
-
-
-
-
-        /// <summary>
-        /// Read info of objects class
-        /// </summary>
-        /// <returns></returns>
-        public List<Figure> ReadAndDeserialize(/*string path*/)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sr = new StreamReader(/*path*/"task.txt"))
-            {
-                return (List<Figure>)serializer.Deserialize(sr);
-            }
-        }
-
-
-        /// <summary>
-        /// Safe info if objects class
-        /// </summary>
-        /// <param name="data"></param>
-        public void SerializeAndSave(/*string path,*/ List<Figure> data)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"task.txt",true))
-            {
-                serializer.Serialize(sw, data);
-            }
-        }
-
-
-        /// <summary>
-        /// Rewriting safe info if objects class
-        /// </summary>
-        /// <param name="data"></param>
-        public void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"task.txt"))
-            {
-                serializer.Serialize(sw, data);
-            }
-        }
+        }               
     }
 
 
@@ -228,6 +183,6 @@ namespace FigureLib
         /// <summary>
         /// Y prop
         /// </summary>
-        public int Y { get => y; set => y = value; }        
+        public int Y { get => y; set => y = value; }
     }
 }

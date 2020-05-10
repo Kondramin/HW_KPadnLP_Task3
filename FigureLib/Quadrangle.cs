@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 
 namespace FigureLib
 {
-    class Quadrangle : Figure
+    public class Quadrangle : Figure
     {
         public Quadrangle(Top a, Top b, Top c, Top d, Color colorFigure) : base(a, b, c, d, colorFigure)
         {

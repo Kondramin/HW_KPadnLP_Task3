@@ -1,10 +1,6 @@
-﻿using System;
+﻿using FigureLib;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FigureLib;
 
 namespace HW_KPLP_Task3
 {
@@ -30,18 +26,18 @@ namespace HW_KPLP_Task3
 1.3	+ Классы прямоугольников и треугольников должны содержать переопределенные методы для вычисления площади.
 1.4	+ Дополнительно создать класс, реализующий интерфейс IComparer.
 1.5	Разработать программу, которая выполняет следующие действия:
-−	считывает информацию из текстового файла, каждая строка которого содержит координаты вершин 
+−	+считывает информацию из текстового файла, каждая строка которого содержит координаты вершин 
         (для прямоугольника левого верхнего и правого нижнего углов) и цвет фигуры, например, для треугольника: 1 1 2 3 4 1 White;
-−	формирует на основании этой информации массив объектов базового класса иерархии;
+−	+формирует на основании этой информации массив объектов базового класса иерархии;
 −	выводит на экран всю информацию, при этом каждая строка выводится тем цветом, который указан в свойстве цвет.
 −	сортирует массив в порядке возрастания площадей многоугольников и выводит отсортированный массив;
 −	меняет цвет всех прямоугольных треугольников, расположенных во II четверти координатной плоскости, на зеленый и выводит измененный массив.
      */
 
-        //sourcethree, софтина для git
-        //gitbush
+    //sourcethree, софтина для git
+    //gitbush
 
-        //enum
+    //enum
     class Program
     {
         static void Main(string[] args)
@@ -53,11 +49,11 @@ namespace HW_KPLP_Task3
             Top b = new Top(x, y);
             Top c = new Top(x, y);
             Color color = Color.FromName("blue");
-            byte d= color.B;
-            
+            byte d = color.B;
+
             a.X = 5;
-            Triangle triangle = new Triangle(a,b,c, color);
-            var tt = new Triangle( new Top(2, 5), new Top(12, 3), new Top(4, 5), Color.FromName("Red"));
+            Triangle triangle = new Triangle(a, b, c, color);
+            var tt = new Triangle(new Top(2, 5), new Top(12, 3), new Top(4, 5), Color.FromName("Red"));
             triangle.ShowInfo();
             tt.ShowInfo();
 
