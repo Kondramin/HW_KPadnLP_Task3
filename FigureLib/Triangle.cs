@@ -6,8 +6,13 @@ namespace FigureLib
     /// <summary>
     /// Class of triangle
     /// </summary>
+    [Serializable]
     public class Triangle : Figure
     {
+        public Triangle()
+        { }
+
+
         /// <summary>
         /// Simple constructor
         /// </summary>

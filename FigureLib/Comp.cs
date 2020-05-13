@@ -4,9 +4,9 @@ namespace FigureLib
 {
     public class Comp : IComparer
     {
-        public int Compare(Figure x, Figure y)
+        public int Compare(object x, object y)
         {
-            return (new CaseInsensitiveComparer().Compare(x.Area(), y.Area()));
+            return (new CaseInsensitiveComparer().Compare(x, y));
         }
     }
 }

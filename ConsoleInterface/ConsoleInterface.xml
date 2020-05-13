@@ -4,32 +4,42 @@
         <name>ConsoleInterface</name>
     </assembly>
     <members>
-        <member name="M:ConsoleInterface.ConsoleInterface.#ctor">
+        <member name="T:ConsoleInterface.ConsoleInterface1">
+            <summary>
+            Class realize CI.
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface1.#ctor">
             <summary>
             Simple initialization.
             </summary>
         </member>
-        <member name="M:ConsoleInterface.ConsoleInterface.StartInterface">
+        <member name="M:ConsoleInterface.ConsoleInterface1.StartInterface">
             <summary>
             Method start UI.
             </summary>
         </member>
-        <member name="M:ConsoleInterface.ConsoleInterface.CreateTriangle">
+        <member name="M:ConsoleInterface.ConsoleInterface1.CreateFugure">
+            <summary>
+            Class of create figure.
+            </summary>
+        </member>
+        <member name="M:ConsoleInterface.ConsoleInterface1.CreateTriangle">
             <summary>
             Create triangle
             </summary>
         </member>
-        <member name="M:ConsoleInterface.ConsoleInterface.CreateQuadrangle">
+        <member name="M:ConsoleInterface.ConsoleInterface1.CreateQuadrangle">
             <summary>
             Create quadrangle
             </summary>
         </member>
-        <member name="M:ConsoleInterface.ConsoleInterface.ShowFigureList">
+        <member name="M:ConsoleInterface.ConsoleInterface1.ShowFigureList">
             <summary>
             Show all figures in list.
             </summary>
         </member>
-        <member name="M:ConsoleInterface.ConsoleInterface.CheckNumber">
+        <member name="M:ConsoleInterface.ConsoleInterface1.CheckNumber">
             <summary>
             Check correct input.
             </summary>

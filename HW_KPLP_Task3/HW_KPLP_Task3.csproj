@@ -52,6 +52,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleInterface\ConsoleInterface.csproj">
+      <Project>{442B587D-908D-42E1-95BC-6DA1C980E611}</Project>
+      <Name>ConsoleInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FigureLib\FigureLib.csproj">
       <Project>{45498084-6ea0-4c63-a6f8-5299f2e4b66c}</Project>
       <Name>FigureLib</Name>

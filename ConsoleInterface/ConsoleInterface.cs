@@ -7,14 +7,18 @@ using System.Xml.Serialization;
 
 namespace ConsoleInterface
 {
-    public class ConsoleInterface
+    /// <summary>
+    /// Class realize CI.
+    /// </summary>
+    public class ConsoleInterface1
     {
+        Quadrangle quad = new Quadrangle();
 
-        List<Figure> FigureList = new List<Figure>();
+
         /// <summary>
         /// Simple initialization.
         /// </summary>
-        public ConsoleInterface()
+        public ConsoleInterface1()
         {
         }
         /// <summary>
@@ -22,6 +26,7 @@ namespace ConsoleInterface
         /// </summary>
         public void StartInterface()
         {
+            
             while (true)
             {
                 Console.WriteLine("1. Add new figure.");
@@ -35,7 +40,7 @@ namespace ConsoleInterface
                 Console.WriteLine();
                 int start_value = CheckNumber();
 
-                if ((start_value > 0) & (start_value < 7))
+                if ((start_value > 0) & (start_value < 9))
                 {
                     switch (start_value)
                     {
@@ -46,17 +51,17 @@ namespace ConsoleInterface
                             ShowFigureList();
                             break;
                         case 3:
-                            SerializeAndSave(FigureList);
+                            quad.SerializeAndSave(quad.FigureList);
                             break;
                         case 4:
-                            SerializeAndRewritingSave(FigureList);
+                            quad.SerializeAndRewritingSave(quad.FigureList);
                             break;
                         case 5:
-                            FigureList = ReadAndDeserialize();
+                            quad.FigureList = new List<Figure>(quad.ReadAndDeserialize());
                             break;
                         case 6:
                             Comp cp = new Comp();
-                            FigureList.Sort(cp.Compare);
+                            quad.FigureList.Sort(cp.Compare);
                             break;
                         case 7:
                             Console.Clear();
@@ -74,6 +79,10 @@ namespace ConsoleInterface
             }
         }
 
+
+        /// <summary>
+        /// Class of create figure.
+        /// </summary>
         public void CreateFugure()
         {
             Console.WriteLine("What figure you want create?");
@@ -111,7 +120,8 @@ namespace ConsoleInterface
             Color color = Color.FromName(Console.ReadLine());
 
             var triangle = new Triangle(a, b, c, color);
-            FigureList.Add(triangle);
+
+            quad.FigureList.Add(triangle);
         }
 
 
@@ -133,7 +143,8 @@ namespace ConsoleInterface
             Color color = Color.FromName(Console.ReadLine());
 
             var quadrangle = new Quadrangle(a, b, c, d, color);
-            FigureList.Add(quadrangle);
+            
+            quad.FigureList.Add(quadrangle);
         }
 
 
@@ -143,14 +154,14 @@ namespace ConsoleInterface
         public void ShowFigureList()
         {
             Console.WriteLine();
-            if (FigureList.Count < 1)
+            if (quad.FigureList.Count < 1)
             {
                 Console.WriteLine("List is empty");
                 Console.ReadLine();
                 return;
             }
             int i = 1;
-            foreach (Figure figure in FigureList)
+            foreach (Figure figure in quad.FigureList)
             {
                 Console.WriteLine($"{i} figure is");
                 figure.ShowInfo();
@@ -158,49 +169,7 @@ namespace ConsoleInterface
             }
             Console.WriteLine();
         }
-
-
-        /// <summary>
-        /// Read info of objects class
-        /// </summary>
-        /// <returns></returns>
-        public List<Figure> ReadAndDeserialize(/*string path*/)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sr = new StreamReader(/*path*/"task.txt"))
-            {
-                return (List<Figure>)serializer.Deserialize(sr);
-            }
-        }
-
-
-        /// <summary>
-        /// Safe info if objects class
-        /// </summary>
-        /// <param name="data"></param>
-        public void SerializeAndSave(/*string path,*/ List<Figure> data)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"task.txt", true))
-            {
-                serializer.Serialize(sw, data);
-            }
-        }
-
-
-        /// <summary>
-        /// Rewriting safe info if objects class
-        /// </summary>
-        /// <param name="data"></param>
-        public void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
-        {
-            var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"task.txt"))
-            {
-                serializer.Serialize(sw, data);
-            }
-        }
-
+        
 
         /// <summary>
         /// Check correct input.
@@ -215,9 +184,6 @@ namespace ConsoleInterface
             }
             return result;
         }
-
-    
-  
     }
 }
 

@@ -9,13 +9,22 @@ namespace FigureLib
 {
     /// <summary>
     /// abstract base class figure
-    /// </summary>
+    /// </summary>   
+    [Serializable(), XmlInclude(typeof(Triangle)), XmlInclude(typeof(Quadrangle)),XmlInclude(typeof(Top))]
     public abstract class Figure : Comp
     {
         string name;
         Top a, b, c, d;
         Top[] Tops;
-        Color colorFigure;
+        public Color colorFigure;
+        public List<Figure> FigureList = new List<Figure>();
+
+
+        /// <summary>
+        /// Simple constructor.
+        /// </summary>
+        public Figure()
+        { }
 
         
         /// <summary>
@@ -105,7 +114,7 @@ namespace FigureLib
             Console.ForegroundColor = cc;
 
             Console.ForegroundColor = cc;
-            Console.WriteLine(this.Name);
+            Console.WriteLine(Name);
             Console.WriteLine($"Color {ColorFigure}");
             Console.WriteLine("Coordinates");
             foreach (Top top in Tops)
@@ -115,6 +124,7 @@ namespace FigureLib
             Console.WriteLine($"Perimeter = {Perimeter()}");
             Console.WriteLine($"Area = {Area()}");
             Console.ResetColor();
+            Console.WriteLine();
         }
 
 
@@ -156,13 +166,59 @@ namespace FigureLib
         public double SideLength(Top a, Top b)
         {
             return Math.Sqrt((Math.Pow((a.X - b.X), 2)) + (Math.Pow((a.Y - b.Y), 2)));
-        }               
+        }
+
+
+        /// <summary>
+        /// Read info of objects class
+        /// </summary>
+        /// <returns></returns>
+        public List<Figure> ReadAndDeserialize(/*string path*/)
+        {
+            var serializer = new XmlSerializer(typeof(List<Figure>));
+            using (var sr = new StreamReader(/*path*/"searilize.txt"))
+            {
+                return (List<Figure>)serializer.Deserialize(sr);
+            }
+        }
+
+
+        /// <summary>
+        /// Safe info if objects class
+        /// </summary>
+        /// <param name="data"></param>
+        public void SerializeAndSave(/*string path,*/ List<Figure> data)
+        {
+            var serializer = new XmlSerializer(typeof(List<Figure>));
+            using (var sw = new StreamWriter(/*path*/"searilize.txt", true))
+            {
+                serializer.Serialize(sw, data);
+            }
+        }
+
+
+        /// <summary>
+        /// Rewriting safe info if objects class
+        /// </summary>
+        /// <param name="data"></param>
+        public void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
+        {
+            var serializer = new XmlSerializer(typeof(List<Figure>));
+            using (var sw = new StreamWriter(/*path*/"searilize.txt"))
+            {
+                serializer.Serialize(sw, data);
+            }
+        }
     }
+
+
+
 
 
     /// <summary>
     /// Simple structure top of figure
     /// </summary>
+    [Serializable]
     public struct Top
     {
         int x, y;
