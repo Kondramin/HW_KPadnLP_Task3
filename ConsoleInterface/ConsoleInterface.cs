@@ -21,6 +21,8 @@ namespace ConsoleInterface
         public ConsoleInterface1()
         {
         }
+
+
         /// <summary>
         /// Method start UI.
         /// </summary>

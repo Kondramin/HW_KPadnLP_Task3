@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600">
+        Title="NotWinForm" Height="450" Width="600" Topmost="True">
     <Grid/>
 </Window>

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleInterface", "Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterface", "WpfInterface\WpfInterface.csproj", "{4274E399-6696-4FC6-A4DC-65B76D9D16C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureLibTests1", "FigureLibTests1\FigureLibTests1.csproj", "{754B8174-DBEB-4B0E-B326-80904886E8B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4274E399-6696-4FC6-A4DC-65B76D9D16C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4274E399-6696-4FC6-A4DC-65B76D9D16C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4274E399-6696-4FC6-A4DC-65B76D9D16C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754B8174-DBEB-4B0E-B326-80904886E8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754B8174-DBEB-4B0E-B326-80904886E8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754B8174-DBEB-4B0E-B326-80904886E8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754B8174-DBEB-4B0E-B326-80904886E8B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
