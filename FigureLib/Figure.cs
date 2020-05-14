@@ -15,7 +15,13 @@ namespace FigureLib
         string name;
         Top a, b, c, d;
         Color colorFigure;
+        /// <summary>
+        /// Array Tops
+        /// </summary>
         public Top[] Tops;
+        /// <summary>
+        /// List exemplars classes
+        /// </summary>
         public List<Figure> FigureList = new List<Figure>();
        
         
@@ -87,9 +93,12 @@ namespace FigureLib
         /// <summary>
         /// Color of figure prop
         /// </summary>
+        [XmlIgnore]
         public Color ColorFigure { get => colorFigure; set => colorFigure = value; }
 
-
+        /// <summary>
+        /// Method to serialize color
+        /// </summary>
         [XmlElement("Color")] // Или Attribute
         public int ColorSerialized
         {
@@ -216,6 +225,27 @@ namespace FigureLib
             using (var sw = new StreamWriter(/*path*/"searilize.xml"))
             {
                 serializer.Serialize(sw, data);
+            }
+        }
+
+
+        public void SecondQuarterChek(List<Figure> figures)
+        {
+            bool chek = true;
+            foreach (Figure figure in figures)
+            {
+                foreach (Top top in figure.Tops)
+                {
+                    if ((top.X < 0)||(top.Y>0))
+                    {
+                        chek = false;
+                        break;
+                    }           
+                }
+                if(chek)
+                {
+                    figure.ColorFigure = Color.Green;
+                }
             }
         }
     }

@@ -35,12 +35,13 @@ namespace ConsoleInterface
                 Console.WriteLine("4. Rewind safe data.");
                 Console.WriteLine("5. Read data");
                 Console.WriteLine("6. Sort List");
-                Console.WriteLine("7. Clear console.");
-                Console.WriteLine("8. Close console.");
+                Console.WriteLine("7. Check second quarter");
+                Console.WriteLine("8. Clear console.");
+                Console.WriteLine("9. Close console.");
                 Console.WriteLine();
                 int start_value = CheckNumber();
 
-                if ((start_value > 0) & (start_value < 9))
+                if ((start_value > 0) & (start_value < 10))
                 {
                     switch (start_value)
                     {
@@ -64,9 +65,12 @@ namespace ConsoleInterface
                             quad.FigureList.Sort(cp.Compare);
                             break;
                         case 7:
-                            Console.Clear();
+                            quad.SecondQuarterChek(quad.FigureList);
                             break;
                         case 8:
+                            Console.Clear();
+                            break;
+                        case 9:
                             Environment.Exit(0);
                             break;
 
