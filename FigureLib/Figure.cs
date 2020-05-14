@@ -4,20 +4,21 @@ using System.Drawing;
 using System.IO;
 using System.Xml.Serialization;
 
-
 namespace FigureLib
 {
     /// <summary>
     /// abstract base class figure
     /// </summary>   
-    [Serializable(), XmlInclude(typeof(Triangle)), XmlInclude(typeof(Quadrangle)),XmlInclude(typeof(Top))]
+    [Serializable(), XmlInclude(typeof(Triangle)), XmlInclude(typeof(Quadrangle))]
     public abstract class Figure : Comp
     {
         string name;
         Top a, b, c, d;
-        Top[] Tops;
-        public Color colorFigure;
+        Color colorFigure;
+        public Top[] Tops;
         public List<Figure> FigureList = new List<Figure>();
+       
+        
 
 
         /// <summary>
@@ -89,6 +90,14 @@ namespace FigureLib
         public Color ColorFigure { get => colorFigure; set => colorFigure = value; }
 
 
+        [XmlElement("Color")] // Или Attribute
+        public int ColorSerialized
+        {
+            get => ColorFigure.ToArgb();
+            set => ColorFigure = Color.FromArgb(value);
+        }
+
+
         /// <summary>
         /// Calculate square of figure.
         /// </summary>
@@ -108,7 +117,7 @@ namespace FigureLib
         /// </summary>
         public void ShowInfo()
         {
-
+            
             var cc = ClosestConsoleColor(ColorFigure.R, ColorFigure.G, ColorFigure.B);
 
             Console.ForegroundColor = cc;
@@ -176,7 +185,7 @@ namespace FigureLib
         public List<Figure> ReadAndDeserialize(/*string path*/)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sr = new StreamReader(/*path*/"searilize.txt"))
+            using (var sr = new StreamReader(/*path*/"searilize.xml"))
             {
                 return (List<Figure>)serializer.Deserialize(sr);
             }
@@ -190,7 +199,7 @@ namespace FigureLib
         public void SerializeAndSave(/*string path,*/ List<Figure> data)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"searilize.txt", true))
+            using (var sw = new StreamWriter(/*path*/"searilize.xml", true))
             {
                 serializer.Serialize(sw, data);
             }
@@ -204,7 +213,7 @@ namespace FigureLib
         public void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
-            using (var sw = new StreamWriter(/*path*/"searilize.txt"))
+            using (var sw = new StreamWriter(/*path*/"searilize.xml"))
             {
                 serializer.Serialize(sw, data);
             }
@@ -218,7 +227,7 @@ namespace FigureLib
     /// <summary>
     /// Simple structure top of figure
     /// </summary>
-    [Serializable]
+   
     public struct Top
     {
         int x, y;
