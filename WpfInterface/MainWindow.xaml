@@ -22,7 +22,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="ButAddFig" Content="Add figure" Grid.Row="0" MaxHeight="50" MaxWidth="120"/>
+            <Button x:Name="ButAddFig" Content="Add figure" Grid.Row="0" MaxHeight="50" MaxWidth="120" Click="ButAddFig_Click"/>
             <Button x:Name="ButShowlits" Content="Show list" Grid.Row="1" MaxHeight="50" MaxWidth="120"/>
             <Button x:Name="ButSafeData" Content="Safe data" Grid.Row="2" MaxHeight="50" MaxWidth="120"/>
             <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="50" MaxWidth="120"/>

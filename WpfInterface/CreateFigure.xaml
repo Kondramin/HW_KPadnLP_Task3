@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfInterface"
         mc:Ignorable="d"
         Title="CreateFigure" x:Name="WinCreateFigure" Height="450" Width="400">
-    <Grid>
+    <Grid Margin="7">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.9*"/>
@@ -16,10 +16,11 @@
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition MinWidth="5" Width="0.1*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="ButTriatgle" Content="Triangle" Grid.Column="0"/>
-            <Button x:Name="ButQuadrangle" Content="Quadrangle" Grid.Column="1"/>
+            <Button x:Name="ButQuadrangle" Content="Quadrangle" Grid.Column="2"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -47,14 +48,22 @@
             <Label Content="Y" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Y" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Y" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="TBTopAX" Grid.Row="0" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopBX" Grid.Row="1" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopCX" Grid.Row="2" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopDX" Grid.Row="3" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopAY" Grid.Row="0" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopBY" Grid.Row="1" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopCY" Grid.Row="2" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopDY" Grid.Row="3" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Margin="0 0 0 5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.3*"/>
                 <ColumnDefinition Width="0.7*"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Color figure;" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="TBColorFig" Grid.Column="1"/>
+            <Label Content="Color figure" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="TBColorFig" Grid.Column="1" Margin="0 0 30 0" FontSize="20"/>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
