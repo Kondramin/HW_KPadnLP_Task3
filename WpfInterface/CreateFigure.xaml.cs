@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfInterface
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CreateFigure.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateFigure : Window
     {
-        public MainWindow()
+        public CreateFigure()
         {
             InitializeComponent();
-        }
-
-        private void ButClear_Click(object sender, RoutedEventArgs e)
-        {
-            TBInfo.Text = "";
         }
     }
 }

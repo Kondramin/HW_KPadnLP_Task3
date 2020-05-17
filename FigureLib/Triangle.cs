@@ -9,6 +9,10 @@ namespace FigureLib
     [Serializable]
     public class Triangle : Figure
     {
+
+        /// <summary>
+        /// Simple constructor
+        /// </summary>
         public Triangle()
         { }
 
@@ -24,6 +28,8 @@ namespace FigureLib
         {
             Name = "Triangle";
         }
+
+
         /// <summary>
         /// Override method of perimeter
         /// </summary>
@@ -32,6 +38,8 @@ namespace FigureLib
         {
             return Math.Round(SideLength(A, B) + SideLength(B, C) + SideLength(A, C), 2);
         }
+
+
         /// <summary>
         /// Override method of area
         /// </summary>

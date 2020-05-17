@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfInterface"
         mc:Ignorable="d"
-        Title="NotWinForm" Height="450" Width="600" Topmost="True">
+        Title="NotWinForm" Height="450" Width="500" Topmost="True">
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="TBInfo" Grid.Column="0" Background="White"/>
-        <Grid Grid.Column="7">
+        <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -28,8 +28,7 @@
             <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="50" MaxWidth="120"/>
             <Button x:Name="ButReadData" Content="Read data" Grid.Row="4" MaxHeight="50" MaxWidth="120"/>
             <Button x:Name="ButSortList" Content="Sort list" Grid.Row="5" MaxHeight="50" MaxWidth="120"/>
-            <Button x:Name="ButClear" Content="Clear text" Grid.Row="6" MaxHeight="50" MaxWidth="120"/>
-
+            <Button x:Name="ButClear" Content="Clear text" Grid.Row="6" MaxHeight="50" MaxWidth="120" Click="ButClear_Click"/>
         </Grid>
     </Grid>
 
