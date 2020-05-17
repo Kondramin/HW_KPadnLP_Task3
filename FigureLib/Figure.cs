@@ -228,7 +228,10 @@ namespace FigureLib
             }
         }
 
-
+        /// <summary>
+        /// Check quarter of figure
+        /// </summary>
+        /// <param name="figures"></param>
         public void SecondQuarterChek(List<Figure> figures)
         {
             bool chek = true;
