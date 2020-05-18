@@ -25,17 +25,19 @@ namespace WpfInterface
             InitializeComponent();
 
         }
-
-        private void ButClear_Click(object sender, RoutedEventArgs e)
-        {
-            TBInfo.Text = "";
-        }
+       
 
         private void ButAddFig_Click(object sender, RoutedEventArgs e)
         {
             CreateFigure createFigure = new CreateFigure();
             createFigure.Owner = this;
             createFigure.Show();
+        }
+
+
+        private void ButClear_Click(object sender, RoutedEventArgs e)
+        {
+            TBInfo.Text = null;
         }
     }
 }

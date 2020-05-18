@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace WpfInterface
 {
@@ -23,5 +24,26 @@ namespace WpfInterface
         {
             InitializeComponent();
         }
+
+        private void ButTriatgle_Click(object sender, RoutedEventArgs e)
+        {
+            TBTopDX.IsEnabled = false;
+            TBTopDY.IsEnabled = false;
+            TBTopDX.Text = null;
+            TBTopDY.Text = null;
+        }
+
+        private void ButQuadrangle_Click(object sender, RoutedEventArgs e)
+        {
+            TBTopDX.IsEnabled = true;
+            TBTopDY.IsEnabled = true;
+        }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+       
     }
 }
