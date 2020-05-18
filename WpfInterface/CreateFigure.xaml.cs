@@ -25,7 +25,7 @@ namespace WpfInterface
             InitializeComponent();
         }
 
-        private void ButTriatgle_Click(object sender, RoutedEventArgs e)
+        private void RadButTriatgle_Click(object sender, RoutedEventArgs e)
         {
             TBTopDX.IsEnabled = false;
             TBTopDY.IsEnabled = false;
@@ -33,16 +33,16 @@ namespace WpfInterface
             TBTopDY.Text = null;
         }
 
-        private void ButQuadrangle_Click(object sender, RoutedEventArgs e)
+        private void RadButQuadrangle_Click(object sender, RoutedEventArgs e)
         {
             TBTopDX.IsEnabled = true;
             TBTopDY.IsEnabled = true;
         }
-        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-        }
+        //private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        //{
+        //    Regex regex = new Regex("[^0-9]+");
+        //    e.Handled = regex.IsMatch(e.Text);
+        //}
 
        
     }
