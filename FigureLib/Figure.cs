@@ -22,7 +22,7 @@ namespace FigureLib
         /// <summary>
         /// List exemplars classes
         /// </summary>
-        public List<Figure> FigureList = new List<Figure>();
+        public static List<Figure> FigureList = new List<Figure>();
        
         
 
@@ -191,7 +191,7 @@ namespace FigureLib
         /// Read info of objects class
         /// </summary>
         /// <returns></returns>
-        public List<Figure> ReadAndDeserialize(/*string path*/)
+        public static List<Figure> ReadAndDeserialize(/*string path*/)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
             using (var sr = new StreamReader(/*path*/"searilize.xml"))
@@ -205,7 +205,7 @@ namespace FigureLib
         /// Safe info if objects class
         /// </summary>
         /// <param name="data"></param>
-        public void SerializeAndSave(/*string path,*/ List<Figure> data)
+        public static void SerializeAndSave(/*string path,*/ List<Figure> data)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
             using (var sw = new StreamWriter(/*path*/"searilize.xml", true))
@@ -219,7 +219,7 @@ namespace FigureLib
         /// Rewriting safe info if objects class
         /// </summary>
         /// <param name="data"></param>
-        public void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
+        public static void SerializeAndRewritingSave(/*string path,*/ List<Figure> data)
         {
             var serializer = new XmlSerializer(typeof(List<Figure>));
             using (var sw = new StreamWriter(/*path*/"searilize.xml"))
@@ -232,7 +232,7 @@ namespace FigureLib
         /// Check quarter of figure
         /// </summary>
         /// <param name="figures"></param>
-        public void SecondQuarterChek(List<Figure> figures)
+        public static void SecondQuarterChek(List<Figure> figures)
         {
             bool chek = true;
             foreach (Figure figure in figures)

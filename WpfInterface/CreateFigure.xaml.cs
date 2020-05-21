@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using FigureLib;
+using System;
 using System.Text.RegularExpressions;
+using System.Windows;
+using System.Windows.Input;
+
 
 namespace WpfInterface
 {
@@ -38,12 +30,41 @@ namespace WpfInterface
             TBTopDX.IsEnabled = true;
             TBTopDY.IsEnabled = true;
         }
-        //private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
-        //{
-        //    Regex regex = new Regex("[^0-9]+");
-        //    e.Handled = regex.IsMatch(e.Text);
-        //}
 
-       
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void ButCancel_Click(object sender, RoutedEventArgs e)
+        {
+            WinCreateFigure.Close();
+        }
+
+        private void ButSafe_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (RAdButTriatgle.IsChecked.Value)
+            {
+                Triangle triangle = new Triangle(new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
+                                                 new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
+                                                 new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
+                                                 System.Drawing.Color.FromName(TBColorFig.Text));
+                FigureLib.Figure.FigureList.Add(triangle);
+            }
+            if (RadButQuadrangle.IsChecked.Value)
+            {
+                Quadrangle quadrangle = new Quadrangle(new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
+                                                       new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
+                                                       new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
+                                                       new Top(Int32.Parse(TBTopDX.Text), Int32.Parse(TBTopDY.Text)), 
+                                                       System.Drawing.Color.FromName(TBColorFig.Text));
+
+                FigureLib.Figure.FigureList.Add(quadrangle);
+            }
+
+        }
     }
 }

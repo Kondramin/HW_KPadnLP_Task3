@@ -12,9 +12,6 @@ namespace ConsoleInterface
     /// </summary>
     public class ConsoleInterface1
     {
-        Quadrangle quad = new Quadrangle();
-
-
         /// <summary>
         /// Simple initialization.
         /// </summary>
@@ -54,20 +51,21 @@ namespace ConsoleInterface
                             ShowFigureList();
                             break;
                         case 3:
-                            quad.SerializeAndSave(quad.FigureList);
+                            
+                            Figure.SerializeAndSave(Figure.FigureList);
                             break;
                         case 4:
-                            quad.SerializeAndRewritingSave(quad.FigureList);
+                            Figure.SerializeAndRewritingSave(Figure.FigureList);
                             break;
                         case 5:
-                            quad.FigureList = new List<Figure>(quad.ReadAndDeserialize());
+                            Figure.FigureList = new List<Figure>(Figure.ReadAndDeserialize());
                             break;
                         case 6:
                             Comp cp = new Comp();
-                            quad.FigureList.Sort(cp.Compare);
+                            Figure.FigureList.Sort(cp.Compare);
                             break;
                         case 7:
-                            quad.SecondQuarterChek(quad.FigureList);
+                            Figure.SecondQuarterChek(Figure.FigureList);
                             break;
                         case 8:
                             Console.Clear();
@@ -127,7 +125,7 @@ namespace ConsoleInterface
 
             var triangle = new Triangle(a, b, c, color);
 
-            quad.FigureList.Add(triangle);
+            Figure.FigureList.Add(triangle);
         }
 
 
@@ -150,7 +148,7 @@ namespace ConsoleInterface
 
             var quadrangle = new Quadrangle(a, b, c, d, color);
             
-            quad.FigureList.Add(quadrangle);
+            Figure.FigureList.Add(quadrangle);
         }
 
 
@@ -160,14 +158,14 @@ namespace ConsoleInterface
         public void ShowFigureList()
         {
             Console.WriteLine();
-            if (quad.FigureList.Count < 1)
+            if (Figure.FigureList.Count < 1)
             {
                 Console.WriteLine("List is empty");
                 Console.ReadLine();
                 return;
             }
             int i = 1;
-            foreach (Figure figure in quad.FigureList)
+            foreach (Figure figure in Figure.FigureList)
             {
                 Console.WriteLine($"{i} figure is");
                 figure.ShowInfo();

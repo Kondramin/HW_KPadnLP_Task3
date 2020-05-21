@@ -48,14 +48,14 @@
             <Label Content="Y" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Y" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Y" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="TBTopAX" Grid.Row="0" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopBX" Grid.Row="1" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopCX" Grid.Row="2" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopDX" Grid.Row="3" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center" IsEnabled="False"/>
-            <TextBox x:Name="TBTopAY" Grid.Row="0" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopBY" Grid.Row="1" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopCY" Grid.Row="2" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopDY" Grid.Row="3" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopAX" PreviewTextInput="NumberValidationTextBox" Grid.Row="0" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopBX" PreviewTextInput="NumberValidationTextBox" Grid.Row="1" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopCX" PreviewTextInput="NumberValidationTextBox" Grid.Row="2" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopDX" PreviewTextInput="NumberValidationTextBox" Grid.Row="3" Grid.Column="2" MaxHeight="30" FontSize="20" TextAlignment="Center" IsEnabled="False"/>
+            <TextBox x:Name="TBTopAY" PreviewTextInput="NumberValidationTextBox" Grid.Row="0" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopBY" PreviewTextInput="NumberValidationTextBox" Grid.Row="1" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopCY" PreviewTextInput="NumberValidationTextBox" Grid.Row="2" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopDY" PreviewTextInput="NumberValidationTextBox" Grid.Row="3" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="2" Margin="0 0 0 5">
             <Grid.ColumnDefinitions>
@@ -70,8 +70,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButSafe" Content="Safe" Grid.Column="0" MaxWidth="110" MaxHeight="40"/>
-            <Button x:Name="ButCancel" Content="Cancel" Grid.Column="1" MaxWidth="110" MaxHeight="40"/>
+            <Button x:Name="ButSafe" Content="Safe" Grid.Column="0" MaxWidth="110" MaxHeight="40" Click="ButSafe_Click"/>
+            <Button x:Name="ButCancel" Content="Cancel" Grid.Column="1" MaxWidth="110" MaxHeight="40" Click="ButCancel_Click"/>
         </Grid>
     </Grid>
 </Window>
