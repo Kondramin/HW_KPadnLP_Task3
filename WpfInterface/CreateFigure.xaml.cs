@@ -45,7 +45,7 @@ namespace WpfInterface
 
         private void ButSafe_Click(object sender, RoutedEventArgs e)
         {
-
+            //Проверки на null
             if (RAdButTriatgle.IsChecked.Value)
             {
                 Triangle triangle = new Triangle(new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
@@ -64,7 +64,7 @@ namespace WpfInterface
 
                 FigureLib.Figure.FigureList.Add(quadrangle);
             }
-
+            WinCreateFigure.Close();
         }
     }
 }

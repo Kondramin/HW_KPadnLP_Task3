@@ -55,7 +55,7 @@
             <TextBox x:Name="TBTopAY" PreviewTextInput="NumberValidationTextBox" Grid.Row="0" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
             <TextBox x:Name="TBTopBY" PreviewTextInput="NumberValidationTextBox" Grid.Row="1" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
             <TextBox x:Name="TBTopCY" PreviewTextInput="NumberValidationTextBox" Grid.Row="2" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
-            <TextBox x:Name="TBTopDY" PreviewTextInput="NumberValidationTextBox" Grid.Row="3" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center"/>
+            <TextBox x:Name="TBTopDY" PreviewTextInput="NumberValidationTextBox" Grid.Row="3" Grid.Column="4" MaxHeight="30" FontSize="20" TextAlignment="Center" IsEnabled="False"/>
         </Grid>
         <Grid Grid.Row="2" Margin="0 0 0 5">
             <Grid.ColumnDefinitions>

@@ -61,7 +61,7 @@ namespace FigureLibTest
             Color expected = Color.White;
 
             //act
-            quad.SecondQuarterChek(ListFig);
+            Figure.SecondQuarterChek(ListFig);
             Color actual = quad.ColorFigure;
 
             //assert
@@ -77,7 +77,7 @@ namespace FigureLibTest
             Color expected = Color.Green;
 
             //act
-            quad.SecondQuarterChek(ListFig);
+            Figure.SecondQuarterChek(ListFig);
             Color actual = quad.ColorFigure;
 
             //assert

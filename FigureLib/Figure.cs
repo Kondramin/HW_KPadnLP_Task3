@@ -153,7 +153,7 @@ namespace FigureLib
         /// <param name="g"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        protected ConsoleColor ClosestConsoleColor(byte r, byte g, byte b)
+        public ConsoleColor ClosestConsoleColor(byte r, byte g, byte b)
         {
             ConsoleColor ret = 0;
             double rr = r, gg = g, bb = b, delta = double.MaxValue;
@@ -251,6 +251,8 @@ namespace FigureLib
                 }
             }
         }
+
+        
     }
 
 
