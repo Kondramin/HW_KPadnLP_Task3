@@ -49,5 +49,8 @@ namespace FigureLib
             double hafPer = Perimeter() / 2;
             return Math.Round(Math.Sqrt(hafPer * (hafPer - SideLength(A, B)) * (hafPer - SideLength(A, C)) * (hafPer * SideLength(B, C))), 2);
         }
+
+
+        
     }
 }

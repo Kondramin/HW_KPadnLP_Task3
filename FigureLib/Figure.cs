@@ -50,6 +50,8 @@ namespace FigureLib
             Tops = new Top[3] { A, B, C };
         }
 
+      
+
 
         /// <summary>
         /// Simple constructor to quadrangle

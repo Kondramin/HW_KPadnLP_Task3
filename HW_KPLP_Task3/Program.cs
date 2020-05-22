@@ -1,5 +1,6 @@
 ﻿using ConsoleInterface;
 using FigureLib;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -45,6 +46,7 @@ namespace HW_KPLP_Task3
         {
             ConsoleInterface1 ci = new ConsoleInterface1();
             ci.StartInterface();
+
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using FigureLib;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 
@@ -34,20 +36,28 @@ namespace WpfInterface
 
         private void ButShowlits_Click(object sender, RoutedEventArgs e)
         {
-            TBInfo.Text=FigureLib.Figure.FigureList[0].Name;
+            Show(FigureLib.Figure.FigureList);
         }
         public void Show(List<FigureLib.Figure> figures)
-        {
+        {   
             foreach(FigureLib.Figure fig in figures)
-            {   
-                TBInfo.Foreground = new SolidColorBrush(ToMediaColor(fig.ColorFigure));
-                TBInfo.Text +=fig.Name;
+            {
+                var TTBInfo = new TextBlock;
+                TTBInfo.Foreground = new SolidColorBrush(ToMediaColor(fig.ColorFigure));
+                
+                
+                TTBInfo.Text += fig.Name;
+                TTBInfo.Text += "\n";
                 foreach(var top in fig.Tops)
                 {
-                    TBInfo.Text = top.X;
-                    TBInfo.Text = top.Y;
+                    TTBInfo.Text += Convert.ToString(top.X);
+                    TTBInfo.Text += " ";
+                    TTBInfo.Text += Convert.ToString(top.Y);
+                    TTBInfo.Text += "\n";
                 }
-                TBInfo.Text = fig.ColorFigure.ToString;
+                TTBInfo.Text += fig.ColorFigure.Name;
+                TTBInfo.Text += "\n";
+                TBInfo.Text += TTBInfo.Text;
             }
         }
 

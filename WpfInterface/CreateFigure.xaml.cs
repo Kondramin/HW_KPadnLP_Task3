@@ -49,16 +49,16 @@ namespace WpfInterface
             if (RAdButTriatgle.IsChecked.Value)
             {
                 Triangle triangle = new Triangle(new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
-                                                 new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
-                                                 new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)),
+                                                 new Top(Int32.Parse(TBTopBX.Text), Int32.Parse(TBTopBY.Text)),
+                                                 new Top(Int32.Parse(TBTopCX.Text), Int32.Parse(TBTopCY.Text)),
                                                  System.Drawing.Color.FromName(TBColorFig.Text));
                 FigureLib.Figure.FigureList.Add(triangle);
             }
             if (RadButQuadrangle.IsChecked.Value)
             {
                 Quadrangle quadrangle = new Quadrangle(new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
-                                                       new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
-                                                       new Top(Int32.Parse(TBTopAX.Text), Int32.Parse(TBTopAY.Text)), 
+                                                       new Top(Int32.Parse(TBTopBX.Text), Int32.Parse(TBTopBY.Text)), 
+                                                       new Top(Int32.Parse(TBTopCX.Text), Int32.Parse(TBTopCY.Text)), 
                                                        new Top(Int32.Parse(TBTopDX.Text), Int32.Parse(TBTopDY.Text)), 
                                                        System.Drawing.Color.FromName(TBColorFig.Text));
 
