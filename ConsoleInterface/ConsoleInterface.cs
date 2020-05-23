@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace ConsoleInterface
 {
@@ -25,7 +23,7 @@ namespace ConsoleInterface
         /// </summary>
         public void StartInterface()
         {
-            
+
             while (true)
             {
                 Console.WriteLine("1. Add new figure.");
@@ -51,7 +49,7 @@ namespace ConsoleInterface
                             ShowFigureList();
                             break;
                         case 3:
-                            
+
                             Figure.SerializeAndSave(Figure.FigureList);
                             break;
                         case 4:
@@ -147,7 +145,7 @@ namespace ConsoleInterface
             Color color = Color.FromName(Console.ReadLine());
 
             var quadrangle = new Quadrangle(a, b, c, d, color);
-            
+
             Figure.FigureList.Add(quadrangle);
         }
 
@@ -173,7 +171,7 @@ namespace ConsoleInterface
             }
             Console.WriteLine();
         }
-        
+
 
         /// <summary>
         /// Check correct input.

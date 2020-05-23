@@ -23,8 +23,8 @@ namespace FigureLib
         /// List exemplars classes
         /// </summary>
         public static List<Figure> FigureList = new List<Figure>();
-       
-        
+
+
 
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace FigureLib
         public Figure()
         { }
 
-        
+
         /// <summary>
         /// Simple constructor to triangle
         /// </summary>
@@ -50,7 +50,7 @@ namespace FigureLib
             Tops = new Top[3] { A, B, C };
         }
 
-      
+
 
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace FigureLib
         /// </summary>
         public void ShowInfo()
         {
-            
+
             var cc = ClosestConsoleColor(ColorFigure.R, ColorFigure.G, ColorFigure.B);
 
             Console.ForegroundColor = cc;
@@ -241,20 +241,20 @@ namespace FigureLib
             {
                 foreach (Top top in figure.Tops)
                 {
-                    if ((top.X < 0)||(top.Y>0))
+                    if ((top.X < 0) || (top.Y > 0))
                     {
                         chek = false;
                         break;
-                    }           
+                    }
                 }
-                if(chek)
+                if (chek)
                 {
                     figure.ColorFigure = Color.Green;
                 }
             }
         }
 
-        
+
     }
 
 
@@ -264,7 +264,7 @@ namespace FigureLib
     /// <summary>
     /// Simple structure top of figure
     /// </summary>
-   
+
     public struct Top
     {
         int x, y;

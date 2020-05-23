@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:WpfInterface"
         mc:Ignorable="d"
         Title="NotWinForm" x:Name="MainWin" Height="450" Width="500" Topmost="True">
-    <Grid Background="AliceBlue">
+    <Grid Background="AliceBlue" Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="TBInfo" Grid.Column="0" Background="White"/>
+        <StackPanel x:Name="StPInfo" Grid.Column="0" Background="White"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -24,10 +24,10 @@
             </Grid.RowDefinitions>
             <Button x:Name="ButAddFig" Content="Add figure" Grid.Row="0" MaxHeight="50" MaxWidth="120" Click="ButAddFig_Click"/>
             <Button x:Name="ButShowlits" Content="Show list" Grid.Row="1" MaxHeight="50" MaxWidth="120" Click="ButShowlits_Click"/>
-            <Button x:Name="ButSafeData" Content="Safe data" Grid.Row="2" MaxHeight="50" MaxWidth="120"/>
-            <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="50" MaxWidth="120"/>
-            <Button x:Name="ButReadData" Content="Read data" Grid.Row="4" MaxHeight="50" MaxWidth="120"/>
-            <Button x:Name="ButSortList" Content="Sort list" Grid.Row="5" MaxHeight="50" MaxWidth="120"/>
+            <Button x:Name="ButSafeData" Content="Safe data" Grid.Row="2" MaxHeight="50" MaxWidth="120" Click="ButSafeData_Click"/>
+            <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="50" MaxWidth="120" Click="ButRewAndSafeData_Click"/>
+            <Button x:Name="ButReadData" Content="Read data" Grid.Row="4" MaxHeight="50" MaxWidth="120" Click="ButReadData_Click"/>
+            <Button x:Name="ButSortList" Content="Sort list" Grid.Row="5" MaxHeight="50" MaxWidth="120" Click="ButSortList_Click"/>
             <Button x:Name="ButClear" Content="Clear text" Grid.Row="6" MaxHeight="50" MaxWidth="120" Click="ButClear_Click"/>
         </Grid>
     </Grid>

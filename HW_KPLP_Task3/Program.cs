@@ -1,8 +1,4 @@
 ﻿using ConsoleInterface;
-using FigureLib;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
 
 namespace HW_KPLP_Task3
 {

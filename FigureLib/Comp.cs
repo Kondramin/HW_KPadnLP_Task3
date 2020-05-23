@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace FigureLib
 {
@@ -20,7 +19,7 @@ namespace FigureLib
             //проверка на null
             Figure figureX = x as Figure;
             Figure figureY = y as Figure;
-            return (new CaseInsensitiveComparer().Compare(figureX.Area(),figureY.Area()));
+            return (new CaseInsensitiveComparer().Compare(figureX.Area(), figureY.Area()));
         }
     }
 }

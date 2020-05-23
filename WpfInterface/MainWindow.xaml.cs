@@ -1,10 +1,8 @@
 ﻿using FigureLib;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Media;
 
 namespace WpfInterface
@@ -31,7 +29,7 @@ namespace WpfInterface
 
         private void ButClear_Click(object sender, RoutedEventArgs e)
         {
-            TBInfo.Text = null;
+            StPInfo.Children.Clear();
         }
 
         private void ButShowlits_Click(object sender, RoutedEventArgs e)
@@ -39,25 +37,24 @@ namespace WpfInterface
             Show(FigureLib.Figure.FigureList);
         }
         public void Show(List<FigureLib.Figure> figures)
-        {   
-            foreach(FigureLib.Figure fig in figures)
+        {
+            foreach (FigureLib.Figure fig in figures)
             {
-                var TTBInfo = new TextBlock;
-                TTBInfo.Foreground = new SolidColorBrush(ToMediaColor(fig.ColorFigure));
-                
-                
-                TTBInfo.Text += fig.Name;
-                TTBInfo.Text += "\n";
-                foreach(var top in fig.Tops)
+                var TBInfo = new TextBlock();
+                TBInfo.Foreground = new SolidColorBrush(ToMediaColor(fig.ColorFigure));
+
+
+                TBInfo.Text += fig.Name + "\n";
+                foreach (var top in fig.Tops)
                 {
-                    TTBInfo.Text += Convert.ToString(top.X);
-                    TTBInfo.Text += " ";
-                    TTBInfo.Text += Convert.ToString(top.Y);
-                    TTBInfo.Text += "\n";
+                    TBInfo.Text += Convert.ToString(top.X) + " ";
+                    TBInfo.Text += Convert.ToString(top.Y) + "\n";
                 }
-                TTBInfo.Text += fig.ColorFigure.Name;
-                TTBInfo.Text += "\n";
-                TBInfo.Text += TTBInfo.Text;
+                TBInfo.Text += "Perimeter = " + Convert.ToString(fig.Perimeter()) + "\n";
+                TBInfo.Text += "Area = " + Convert.ToString(fig.Area()) + "\n";
+                TBInfo.Text += "Color of figure: " + fig.ColorFigure.Name + "\n";
+
+                StPInfo.Children.Add(TBInfo);
             }
         }
 
@@ -66,6 +63,34 @@ namespace WpfInterface
         public System.Windows.Media.Color ToMediaColor(System.Drawing.Color color)
         {
             return System.Windows.Media.Color.FromArgb(color.A, color.R, color.G, color.B);
+        }
+
+        private void ButSafeData_Click(object sender, RoutedEventArgs e)
+        {
+            FigureLib.Figure.SerializeAndSave(FigureLib.Figure.FigureList);
+        }
+
+        private void ButRewAndSafeData_Click(object sender, RoutedEventArgs e)
+        {
+            FigureLib.Figure.SerializeAndRewritingSave(FigureLib.Figure.FigureList);
+        }
+
+        private void ButReadData_Click(object sender, RoutedEventArgs e)
+        {
+            FigureLib.Figure.FigureList = FigureLib.Figure.ReadAndDeserialize();
+        }
+
+        private void ButSortList_Click(object sender, RoutedEventArgs e)
+        {
+            SortList(FigureLib.Figure.FigureList);
+        }
+        public void SortList(List<FigureLib.Figure> figures)
+        {
+            Comp cp = new Comp();
+            FigureLib.Figure.FigureList.Sort(cp.Compare);
+            var TBlock = new TextBlock();
+            TBlock.Text = "List sorted";
+            StPInfo.Children.Add(TBlock);
         }
     }
 }
