@@ -11,7 +11,9 @@
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="StPInfo" Grid.Column="0" Background="White"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="StPInfo" Grid.Column="0" Background="White"/>
+        </ScrollViewer>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
