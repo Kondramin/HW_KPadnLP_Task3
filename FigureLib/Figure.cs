@@ -102,10 +102,10 @@ namespace FigureLib
         /// Method to serialize color
         /// </summary>
         [XmlElement("Color")] // Или Attribute
-        public int ColorSerialized
+        public string ColorSerialized
         {
-            get => ColorFigure.ToArgb();
-            set => ColorFigure = Color.FromArgb(value);
+            get => ColorFigure.Name;
+            set => ColorFigure = Color.FromName(value);
         }
 
 
@@ -198,7 +198,13 @@ namespace FigureLib
             var serializer = new XmlSerializer(typeof(List<Figure>));
             using (var sr = new StreamReader(/*path*/"searilize.xml"))
             {
-                return (List<Figure>)serializer.Deserialize(sr);
+                var figures = new List<Figure>();
+                figures = (List<Figure>)serializer.Deserialize(sr);
+                foreach (var fig in figures)
+                {
+                    fig.ColorFigure = Color.FromName(fig.ColorSerialized);
+                }
+                return figures;
             }
         }
 
