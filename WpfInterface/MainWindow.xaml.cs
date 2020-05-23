@@ -68,16 +68,25 @@ namespace WpfInterface
         private void ButSafeData_Click(object sender, RoutedEventArgs e)
         {
             FigureLib.Figure.SerializeAndSave(FigureLib.Figure.FigureList);
+            var TBlock = new TextBlock();
+            TBlock.Text = "Done";
+            StPInfo.Children.Add(TBlock);
         }
 
         private void ButRewAndSafeData_Click(object sender, RoutedEventArgs e)
         {
             FigureLib.Figure.SerializeAndRewritingSave(FigureLib.Figure.FigureList);
+            var TBlock = new TextBlock();
+            TBlock.Text = "Done";
+            StPInfo.Children.Add(TBlock);
         }
 
         private void ButReadData_Click(object sender, RoutedEventArgs e)
         {
             FigureLib.Figure.FigureList = FigureLib.Figure.ReadAndDeserialize();
+            var TBlock = new TextBlock();
+            TBlock.Text = "Done";
+            StPInfo.Children.Add(TBlock);
         }
 
         private void ButSortList_Click(object sender, RoutedEventArgs e)
@@ -89,7 +98,7 @@ namespace WpfInterface
             Comp cp = new Comp();
             FigureLib.Figure.FigureList.Sort(cp.Compare);
             var TBlock = new TextBlock();
-            TBlock.Text = "List sorted";
+            TBlock.Text = "Done";
             StPInfo.Children.Add(TBlock);
         }
     }
