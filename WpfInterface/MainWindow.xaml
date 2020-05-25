@@ -23,14 +23,16 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="ButAddFig" Content="Add figure" Grid.Row="0" MaxHeight="50" MaxWidth="120" Click="ButAddFig_Click"/>
-            <Button x:Name="ButShowlits" Content="Show list" Grid.Row="1" MaxHeight="50" MaxWidth="120" Click="ButShowlits_Click"/>
-            <Button x:Name="ButSafeData" Content="Safe data" Grid.Row="2" MaxHeight="50" MaxWidth="120" Click="ButSafeData_Click"/>
-            <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="50" MaxWidth="120" Click="ButRewAndSafeData_Click"/>
-            <Button x:Name="ButReadData" Content="Read data" Grid.Row="4" MaxHeight="50" MaxWidth="120" Click="ButReadData_Click"/>
-            <Button x:Name="ButSortList" Content="Sort list" Grid.Row="5" MaxHeight="50" MaxWidth="120" Click="ButSortList_Click"/>
-            <Button x:Name="ButClear" Content="Clear text" Grid.Row="6" MaxHeight="50" MaxWidth="120" Click="ButClear_Click"/>
+            <Button x:Name="ButAddFig" Content="Add figure" Grid.Row="0" MaxHeight="40" MaxWidth="120" Click="ButAddFig_Click"/>
+            <Button x:Name="ButShowlits" Content="Show list" Grid.Row="1" MaxHeight="40" MaxWidth="120" Click="ButShowlits_Click"/>
+            <Button x:Name="ButSafeData" Content="Safe data" Grid.Row="2" MaxHeight="40" MaxWidth="120" Click="ButSafeData_Click"/>
+            <Button x:Name="ButRewAndSafeData" Content="Rewind and safe data" Grid.Row="3" MaxHeight="40" MaxWidth="120" Click="ButRewAndSafeData_Click"/>
+            <Button x:Name="ButReadData" Content="Read data" Grid.Row="4" MaxHeight="40" MaxWidth="120" Click="ButReadData_Click"/>
+            <Button x:Name="ButSortList" Content="Sort list" Grid.Row="5" MaxHeight="40" MaxWidth="120" Click="ButSortList_Click"/>
+            <Button x:Name="ButSecondQuarterChek" Content="Second Quarter Check" Grid.Row="6" MaxHeight="40" MaxWidth="120" Click="ButSecondQuarterChek_Click"/>
+            <Button x:Name="ButClear" Content="Clear text" Grid.Row="7" MaxHeight="40" MaxWidth="120" Click="ButClear_Click"/>
         </Grid>
     </Grid>
 

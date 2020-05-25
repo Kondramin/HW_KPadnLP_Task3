@@ -101,5 +101,13 @@ namespace WpfInterface
             TBlock.Text = "Done";
             StPInfo.Children.Add(TBlock);
         }
+
+        private void ButSecondQuarterChek_Click(object sender, RoutedEventArgs e)
+        {
+            FigureLib.Figure.SecondQuarterChek(FigureLib.Figure.FigureList);
+            var TBlock = new TextBlock();
+            TBlock.Text = "Done";
+            StPInfo.Children.Add(TBlock);
+        }
     }
 }
